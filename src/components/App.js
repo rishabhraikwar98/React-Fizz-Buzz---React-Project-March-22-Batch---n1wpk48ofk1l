@@ -26,9 +26,9 @@ export default function App() {
       >
         Increment
       </button>
-      <h1 className={
+      <div id = "counter" className={
         logic()
-      } >{count}</h1>
+      } >{count}</div>
       <button
         id="decrement"
         onClick={() => {
