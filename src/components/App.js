@@ -11,7 +11,7 @@ export default function App() {
     else if (count % 3 === 0) {
       return "fizz";
     }
-    else if(count % 5) {
+    else if(count % 5===0) {
       return "buzz"
     }
     else {
