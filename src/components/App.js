@@ -15,7 +15,7 @@ export default function App() {
       >
         Increment
       </button>
-      <div id="counter" className = {count % 5 == 0 && count % 3 == 0 ? 'fizzbuzz' : (count % 3 == 0) ? 'fizz' : (count % 5 == 0 ) ? 'buzz' : 'normal'}>{count}</div>
+      <div id="counter" className = {count % 5 === 0 && count % 3 === 0 ? 'fizzbuzz' : (count % 3 === 0) ? 'fizz' : (count % 5 === 0 ) ? 'buzz' : 'normal'}>{count}</div>
       <button
         id="decrement"
         onClick={() => {
