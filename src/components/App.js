@@ -19,7 +19,7 @@ export default function App() {
       <button
         id="decrement"
         onClick={() => {
-          if(count!=1){
+          if(count!==1){
           setCount(count - 1);
           }
         }}
