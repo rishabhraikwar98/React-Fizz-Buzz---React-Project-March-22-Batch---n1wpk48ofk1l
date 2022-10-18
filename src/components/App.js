@@ -1,24 +1,24 @@
-import { useState } from "react";
-import "../styles/App.css";
+import React, { useState } from 'react'
+import '../styles/App.css';
+const App = () => {
+const[count,setCount]=useState(1)
 
-export default function App() {
-  const [count, setCount] = useState(1);
-  const Inc = ()=>{
-    setCount(count+1)
-  }
-  const Dec = ()=>{
-      if(count>1){
-      setCount(count-1)
+    const IncrementHandler=()=>{
+          setCount(count+1)
     }
-    
-  }
+
+    const DecrementHandler=()=>{
+            setCount(count-1)
+    }
   
- 
   return (
-    <>
-    <button id="increment" onClick ={Inc}>Inecrement</button>
-    <div id= "counter"className= {count % 5 === 0 && count % 3 === 0 ? 'fizzbuzz' : (count % 5 === 0) ? 'buzz' : (count % 3 === 0 ) ? 'fizz' : 'normal'}>{count}</div>
-    <button id="decrement" onClick ={Dec}>Decrement</button>
-    </>
-  );
+    <div id="main">
+     <div className= {(count % 5 == 0 && count % 3 == 0) ? 'fizzbuzz' : (count % 3 == 0) ? 'fizz' : (count % 5 == 0 ) ? 'buzz' : 'normal'}  id='counter'>{count}</div>
+        <button id='increment' onClick={IncrementHandler}>Increments</button>
+        <button id='decrement' onClick={DecrementHandler}>Decrements</button>
+    </div>
+  )
 }
+
+
+export default App;
